@@ -1,0 +1,17 @@
+.vital-tasks-container {
+    display: flex;
+    max-width: fit-content;
+    align-items: flex-end;
+    max-width: 100%;
+    width: auto;
+    background-color: #F5F8FF;
+  }
+  
+  .vital-tasks-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    background-color: #F5F8FF;
+    height: 100vh;
+    overflow-y: auto;
+  }

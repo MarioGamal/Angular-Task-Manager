@@ -1,0 +1,24 @@
+.recent-tasks {
+  background-color: #F5F8FF;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 10px 10px lightgray;
+  min-height: fit-content;
+  }
+  
+  .recent-tasks .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .recent-tasks .header h5 {
+    margin: 5px;
+    color: #FF6767;
+    font-size: medium;
+  }
+  
+  .recent-tasks .header h5 i {
+    color: gray;
+  }

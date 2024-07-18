@@ -1,0 +1,17 @@
+<div class="today-tasks">
+    <div class="header">
+      <h5><i class="bi bi-clipboard"></i> Vital Todos </h5>
+      
+    </div>
+
+    
+    <!-- @if (todayTasks.length == 0) {
+      <p>Lucky!, you have no tasks in To Do status</p>
+    } -->
+    @for (task of vitalTasks; track task.id) {
+        <div>
+          <app-task-card [task]="task"></app-task-card>
+        </div>
+    }
+  </div>
+  

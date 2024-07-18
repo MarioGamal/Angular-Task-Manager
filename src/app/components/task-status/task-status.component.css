@@ -1,0 +1,47 @@
+.task-statuses-container {
+    display: flex;
+    background-color: #F5F8FF;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .task-statuses-content{
+    margin: 10px;
+  }
+
+  .task-statuses-content button{
+    margin-bottom: 5px;
+  }
+  
+  .task-statuses-content h1 {
+    margin-bottom: 20px;
+  }
+  
+  .task-statuses-content table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+
+  }
+  
+  .task-statuses-container th, .task-statuses-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .task-statuses-container th {
+    background-color: #f4f4f4;
+  }
+  
+  .task-statuses-container button {
+    background-color: #ff6767;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .task-statuses-container button:hover {
+    background-color: #e55e5e;
+  }
+  

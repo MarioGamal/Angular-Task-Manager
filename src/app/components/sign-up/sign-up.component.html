@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="form-box">
+        <img class="illustration" src="assets/illustration.jpg" alt="illustration" />
+    
+        <div class="form-content">
+            <h2 style="font-weight: bold;">Sign Up</h2>
+            <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>        
+                    <input placeholder="Enter First Name" type="text" class="form-control" id="firstName" formControlName="firstName">
+                    @if (this.signUpForm.get('firstName')?.invalid && this.signUpForm.get('firstName')?.touched) {
+                        <div class="text-danger">
+                            First Name is required
+                        </div>
+                    }
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>  
+                <input placeholder="Enter Last Name" type="text" class="form-control" id="lastName" formControlName="lastName">
+                @if (this.signUpForm.get('lastName')?.invalid && this.signUpForm.get('lastName')?.touched) {
+                    <div class="text-danger">
+                        Last Name is required
+                    </div>
+                }
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>  
+                <input placeholder="Enter Email Address" type="text" class="form-control" id="username" formControlName="username">
+                @if (this.signUpForm.get('username')?.invalid && this.signUpForm.get('username')?.touched) {
+                    <div class="text-danger">
+                        Valid Email is required
+                    </div>
+                }
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>  
+                <input placeholder="Enter Password" type="password" class="form-control" id="password" formControlName="password">
+                @if (this.signUpForm.get('password')?.invalid && this.signUpForm.get('password')?.touched) {
+                    <div class="text-danger">
+                        Password must be at least 6 characters
+                    </div>
+                }
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>  
+                <input placeholder="Confirm Password" type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword">
+                @if (this.signUpForm.errors?.['mismatch'] && this.signUpForm.get('confirmPassword')?.touched) {
+                    <div class="text-danger">
+                        Passwords must match
+                    </div>
+                }
+            </div>
+            <button type="submit" class="btn btn-primary w-100 signup-btn" (click)="onSignUp" [disabled]="signUpForm.invalid">Sign Up</button>
+            </form>
+            <p class="mt-3 text-center">
+            Already have an account? <a [routerLink]="['/sign-in']">Sign In</a>
+            </p>
+      </div>
+    </div>
+  </div>
+  

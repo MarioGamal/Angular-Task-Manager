@@ -1,0 +1,19 @@
+<div class="navbar-container">
+    <div>
+        @if (user) {
+            <div class="user-info">
+                <img alt="userpic" src="assets/profile_pic_avatar.svg"/>
+                <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+                <p>{{ user.username }}</p>
+            </div>
+        }
+      <div class="nav-links">
+        <a routerLink="/dashboard" routerLinkActive="active"><i class="bi bi-grid-1x2-fill"></i>Dashboard</a>
+        <a routerLink="/vital-tasks" routerLinkActive="active"><i class="bi bi-exclamation-lg"></i>Vital Tasks</a>
+        <a routerLink="/my-tasks" routerLinkActive="active"><i class="bi bi-clipboard-check"></i>My Tasks</a>
+        <a routerLink="/task-categories" routerLinkActive="active"><i class="bi bi-list-task"></i>Task Categories</a>
+      </div>
+    </div>
+    <div class="logout" (click)="logout()"><i class="bi bi-box-arrow-right"></i>Logout</div>
+  </div>
+  

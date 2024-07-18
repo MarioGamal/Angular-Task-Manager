@@ -1,0 +1,58 @@
+<app-top-bar></app-top-bar>
+<div class="task-statuses-container">
+    <app-navbar></app-navbar>
+    <div class="task-statuses-content">
+        <h1>Task Categories</h1>
+    <button (click)="addTaskStatus()">Add Category</button>
+    <table>
+      <thead>
+        <tr>
+          <th>SN</th>
+          <th>Task Status</th>
+          <th>Action</th>
+          <th>Enabled</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (status of taskStatuses; let i = $index ;track i) {
+            <tr>
+                <td>{{ i + 1 }}</td>
+                <td>{{ status.name }}</td>
+                <td>
+                  <button (click)="openEditModal(editModal, status)">Edit</button> <!-- (click)="updateTaskStatus(status._id, status.name, status.enabled)-->
+                </td>
+                <td>
+                  <!-- <input type="checkbox" [checked]="status.enabled" (change)="updateTaskStatus(status._id, status.name, !status.enabled)"> -->
+                  <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" (change)="updateTaskStatus(status._id, status.name, !status.enabled)" role="switch" id="flexSwitchCheckChecked" [checked]="status.enabled">
+                </div>
+                </td>
+              </tr>
+        }
+        
+      </tbody>
+    </table>
+    </div>
+    <!-- Modal Template -->
+  <ng-template #editModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Edit Task Status</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="taskStatusForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Task Status Name</label>
+          <input type="text" id="name" class="form-control" formControlName="name">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss('cancel')">Cancel</button>
+      <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+    </div>
+  </ng-template>
+  </div>
+
+
+  

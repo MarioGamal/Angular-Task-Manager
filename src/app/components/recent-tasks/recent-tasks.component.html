@@ -1,0 +1,14 @@
+<div class="recent-tasks">
+    <div class="header">
+        <h5>
+            <i class="bi bi-clipboard2-check"></i> Completed Tasks
+        </h5>
+      </div>
+    @for (task of completedTasks; track task.id) {
+        <div>
+            <app-task-card [task]="task"></app-task-card>
+        </div>
+    }
+    
+  </div>
+  

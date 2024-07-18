@@ -1,0 +1,65 @@
+.card {
+  margin-bottom: 20px;
+  border: 1px solid black; /* Adding a border for better visual separation */
+  border-radius: 20px;
+  background-color: #F5F8FF;
+}
+
+.card-body {
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold; /* Making the title bold */
+}
+
+.card-description {
+  margin-bottom: 20px;
+  color: #6c757d; /* Grayish color for the description */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6c757d; /* Grayish color for meta info */
+}
+
+.card-meta span {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-small;
+  color: #6c757d; /* Grayish color for meta info */
+}
+
+.btn-link {
+  color: #6c757d;
+  text-decoration: none;
+  padding: 0;
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+.edit-btn{
+  border: 0;
+  background-color: #F5F8FF;
+  color: #6c757d;
+}

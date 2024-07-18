@@ -1,0 +1,57 @@
+.dashboard-container {
+    display: flex;
+    background-color: #F5F8FF;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 30px;
+    /* min-height: 100vh; Ensure the content area covers the full height */
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .dashboard-header {
+    margin-bottom: 20px;
+    align-self: flex-start;
+    /* flex: 1; */
+  }
+
+  .dashboard-header h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* min-height: 100vh; */
+    /* flex: 1; */
+  }
+  
+  .left-column {
+    margin-right: 20px;
+    flex:1;
+  }
+  
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .task-card {
+    margin-bottom: 10px;
+  }
+
+  .task-status{
+    margin-bottom: 20px;
+  }
+  

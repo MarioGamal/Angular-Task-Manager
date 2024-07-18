@@ -1,0 +1,49 @@
+<div class="today-tasks">
+    <div class="header">
+      <h5><i class="bi bi-clipboard"></i> To-Do </h5>
+      <div class="add-task" (click)="open(content)">
+        <i class="bi bi-plus" ></i> <span class="add-task-text">Add Task</span> 
+      </div>
+    </div>
+
+    <div class="header-date">
+      <p> {{todayDate}} </p>
+      <p style="color: #A1A3AB;"> .Today </p>
+    </div>
+    <!-- @if (todayTasks.length == 0) {
+      <p>Lucky!, you have no tasks in To Do status</p>
+    } -->
+    @for (task of todayTasks; track task.id) {
+        <div>
+          <app-task-card [task]="task"></app-task-card>
+        </div>
+    }
+  <!-- Add Task Modal -->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" id="addTaskModalLabel">Add New Task</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="addTaskForm">
+        <div class="mb-3">
+          <label for="taskTitle" class="form-label">Task Title</label>
+          <input type="text" class="form-control" id="taskTitle" formControlName="title">
+        </div>
+        <div class="mb-3">
+          <label for="taskDescription" class="form-label">Task Description</label>
+          <textarea class="form-control" id="taskDescription" rows="3" formControlName="description"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="taskDueDate" class="form-label">Due Date</label>
+          <input type="date" class="form-control" id="taskDueDate" formControlName="dueDate">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cross click')">Close</button>
+      <button type="button" class="btn btn-primary" (click)="saveTask(modal)">Add Task</button>
+    </div>
+  </ng-template>
+  </div>
+  

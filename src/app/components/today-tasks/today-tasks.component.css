@@ -1,0 +1,64 @@
+.today-tasks {
+  background-color: #F5F8FF;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 10px 10px lightgray;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.today-tasks .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.today-tasks .header h5 {
+  margin: 5px;
+  color: #FF6767;
+  font-size: medium;
+}
+
+.today-tasks .header-date {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.today-tasks .header-date p {
+  margin: 5px;
+  color: black;
+  font-size: small;
+}
+
+.today-tasks .header .add-task {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #ff6767;
+  cursor: pointer;
+}
+
+.today-tasks .header .add-task i {
+  margin-right: 5px;
+}
+
+.today-tasks .header .add-task:hover {
+  color: #e55e5e;
+}
+
+.today-tasks .bi-clipboard{
+  color: #A1A3AB;
+} 
+
+.add-task-text{
+  color: #A1A3AB; 
+  font-size: smaller;
+}
+
+.add-task-text:hover{
+  color: gray;
+}

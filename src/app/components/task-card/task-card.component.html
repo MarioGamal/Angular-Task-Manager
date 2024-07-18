@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title-header">
+      <h5 class="card-title">{{ task.title }}</h5>
+      <button class="edit-btn" (click)="openEditModal(editTaskModal)">
+        <i class="bi bi-three-dots"></i>
+      </button>
+    </div>
+    <div class="card-description">
+      {{ task.description }}
+    </div>
+      
+    <div class="card-meta">
+      <span>Status: {{ task.status }}</span>
+      <span>Due date: {{ task.dueDate | date }}</span>
+      <span>Created on: {{ task.createdAt | date }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Task Modal -->
+<ng-template #editTaskModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Edit Task</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="editTaskForm">
+      <div class="mb-3">
+        <label for="editTaskTitle" class="form-label">Task Title</label>
+        <input type="text" class="form-control" id="editTaskTitle" formControlName="title">
+      </div>
+      <div class="mb-3">
+        <label for="editTaskDescription" class="form-label">Task Description</label>
+        <textarea class="form-control" id="editTaskDescription" rows="3" formControlName="description"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="editTaskDueDate" class="form-label">Due Date</label>
+        <input type="date" class="form-control" id="editTaskDueDate" formControlName="dueDate">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="updateTask(modal)">Update Task</button>
+  </div>
+</ng-template>

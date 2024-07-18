@@ -1,0 +1,28 @@
+<app-top-bar></app-top-bar>
+<div class="dashboard-container">
+  <app-navbar></app-navbar>
+  <!-- <div class="navbar">
+    
+  </div> -->
+  
+  <div class="dashboard-content">
+    <div class="dashboard-header">
+      <h2>Welcome Back, {{user.firstName}} 👋</h2>
+    </div>
+    <div class="content">
+      <div class="left-column">
+        <app-today-tasks></app-today-tasks>
+      </div>
+      <div class="right-column">
+        <div class="task-status">
+          <app-task-statistics></app-task-statistics>
+        </div>
+        <div class="completed-tasks">
+          <app-recent-tasks></app-recent-tasks>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>

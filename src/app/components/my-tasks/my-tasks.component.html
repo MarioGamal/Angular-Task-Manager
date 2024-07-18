@@ -1,0 +1,19 @@
+<app-top-bar></app-top-bar>
+<div class="my-tasks-container">
+    <app-navbar></app-navbar>
+    <div class="my-tasks-content">
+      <div class="task-lists" cdkDropListGroup>
+        @for (status of taskStatuses; track status) {
+            <div class="task-list" cdkDropList [id]="status.name" [cdkDropListData]="tasks[status.name]" (cdkDropListDropped)="drop($event)">
+                <h5>{{ status.name | titlecase }}</h5>
+                @for (task of tasks[status.name]; track task.id) {
+                  <div class="task-card" cdkDrag>
+                      <app-task-card [task]="task"></app-task-card>
+                    </div>
+                }
+              </div>
+        }
+      </div>
+    </div>
+  </div>
+  

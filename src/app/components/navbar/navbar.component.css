@@ -1,0 +1,91 @@
+.navbar-container {
+  background-color: #ff6767;
+  height: 100vh;
+  width: 300px;
+  padding: 20px;
+  min-height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column; 
+  /* justify-content: flex-start; */
+  position:  sticky;
+  float: left;
+  top: 0;
+  overflow: auto;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}
+
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-links a {
+  padding: 15px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.nav-links i {
+  margin-right: 5px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: white;
+  color: #ff6767;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+}
+
+.logout {
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout:hover {
+  background-color: white;
+  color: #ff6767;
+}
+
+.logout i {
+  margin-right: 5px;
+}
